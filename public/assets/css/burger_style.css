@@ -23,6 +23,14 @@ li {
     text-align: center;
   }
   .imageburg {
-      height: 50px;
-      width: auto;
+      background-size: cover;
+      height: 180px;
+      width: 120px;
+      border-radius: 25px;
+      background-image: url(../img/pablo-merchan-montes-hyIE90CN6b0-unsplash.jpg);
+      /* background-repeat: no-repeat; */
+      position: relative;
+      margin-left: 47%;
+      margin-right: 50%;
+     
   }

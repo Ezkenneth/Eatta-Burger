@@ -1,3 +1,3 @@
-INSERT INTO burgers (name) VALUES ('Quarter Pounder with Cheese');
-INSERT INTO burgers (name) VALUES ('The Devastator');
-INSERT INTO burgers (name) VALUES ('The First Sin');
+INSERT INTO burgers (name, devoured) VALUES ('Quarter Pounder with Cheese', false);
+INSERT INTO burgers (name, devoured) VALUES ('The Devastator', false);
+INSERT INTO burgers (name, devoured) VALUES ('The First Sin', false);

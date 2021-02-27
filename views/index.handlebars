@@ -2,8 +2,8 @@
 <hr>
 <br>
 <br>
-<div><img src="/public/assets/img/photo-1530554764233-e79e16c91d08.jfif" alt="" class="imageburg"></div>
-<h2>Add a Burger <i class=""></i></h2>
+<div class="imageburg"></div>
+<h2>Add a Burger <i class="fas fa-plus-square"></i></h2>
 <form class="create-form">
 
   <div class="form-group">
@@ -11,11 +11,14 @@
     <input type="text" id="ca" name="name">
   </div>
 
-  {{!-- <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div> --}}
-
+  
   <button type="submit">Add Burger</button>
 </form>
+
+<ul>
+  {{#each burgers}}
+  {{#unless devoured}}
+    {{ burgers/burger-block devoured=true}}
+    {{/unless}}
+    {{/each}}
+</ul>
