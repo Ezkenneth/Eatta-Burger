@@ -12,13 +12,24 @@
   </div>
 
   
-  <button type="submit">Add Burger</button>
+  <button type="submit" class="create-form">Add Burger</button>
 </form>
-
-<ul>
+<container>
+<ul class="col-6">
   {{#each burgers}}
   {{#unless devoured}}
-    {{ burgers/burger-block devoured=true}}
-    {{/unless}}
+<li class="toEat" >{{id}} - {{name}} -- <div>
+  <button class="devour" data-id = {{id}}> Devour</button>
+</div></li>
+       {{/unless}}
     {{/each}}
 </ul>
+
+<ul class="col-6">
+  {{#each burgers}}
+  {{#if devoured}}
+<li class="eaten">{{id}} - {{name}} </li>
+       {{/if}}
+    {{/each}}
+</ul>
+</container>

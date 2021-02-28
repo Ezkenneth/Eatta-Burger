@@ -1,18 +1,13 @@
 li {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
+   
   }
   
   .label {
     font-weight: bold;
   }
   
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
   
   .form-group {
     margin-bottom: 5px;
@@ -33,4 +28,27 @@ li {
       margin-left: 47%;
       margin-right: 50%;
      
+  }
+
+  .toEat {
+    text-align: left;
+     width: 50%;
+     
+   
+    
+    
+
+  }
+  .eaten {
+    text-align: right;
+    width: 50%;
+   
+  }
+  ul{
+    display: inline-block;
+  }
+
+  li{
+    background-color: rgb(206, 173, 65);
+    
   }

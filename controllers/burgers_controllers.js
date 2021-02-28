@@ -4,43 +4,33 @@ var router = express.Router();
 
 var burger = require("../models/burger.js")
 
-router.get("/", function(req, res) {
-    burger.selectAll(function(data) {
-      var hbsObject = {
-        burgers: data
-      };
-      console.log(hbsObject);
-      // console.log(burgers)
-      res.render("index", hbsObject);
-    });
+router.get("/", async function(req, res) {
+   try {
+     var data = await burger.selectAll()
+     res.render("index", {burgers: data})
+   } catch (error) {
+     res.status(500).send(error)
+   }
   });
   
-  router.post("/api/burgers", function(req, res) {
-    burger.insertOne([
-      "name", "devoured"
-    ], [
-      req.body.name, req.body.devoured
-    ], function(result) {
-      // Send back the ID of the new quote
-      res.json({ id: result.insertId });
-    });
+  router.post("/api/burgers", async function(req, res) {
+  try {
+    await burger.insertOne(req.body.name)
+    res.send("Success")
+  } catch (error) {
+    res.status(500).send(error)
+  }
   });
   
-  router.put("/api/burgers/:id", function(req, res) {
-    var condition = "id = " + req.params.id;
-  
-    console.log("condition", condition);
-  
-    burger.updateOne({
-      devoured: req.body.sleepy
-    }, condition, function(result) {
-      if (result.changedRows == 0) {
-        // If no rows were changed, then the ID must not exist, so 404
-        return res.status(404).end();
-      } else {
-        res.status(200).end();
-      }
-    });
+  router.put("/api/burgers/:id", async function(req, res) {
+    console.log(req.params.id)
+    try {
+      await burger.updateOne(req.params.id)
+      res.send("Success")
+    } catch (error) {
+      res.status(500).send(error)
+      console.log(error)
+    }
   });
 
 
