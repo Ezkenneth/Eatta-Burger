@@ -2,7 +2,7 @@
 var mysql = require("mysql");
 
 var connection;
-
+// Heroku jaws db env setup
 if(process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {

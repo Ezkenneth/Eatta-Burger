@@ -3,7 +3,7 @@ const express = require('express');
 var router = express.Router();
 
 var burger = require("../models/burger.js")
-
+// Get function for burgers
 router.get("/", async function(req, res) {
    try {
      var data = await burger.selectAll()
@@ -12,7 +12,7 @@ router.get("/", async function(req, res) {
      res.status(500).send(error)
    }
   });
-  
+  // Post req for new burgers
   router.post("/api/burgers", async function(req, res) {
   try {
     await burger.insertOne(req.body.name)
@@ -21,7 +21,7 @@ router.get("/", async function(req, res) {
     res.status(500).send(error)
   }
   });
-  
+  // Put req to update burgers to devoured
   router.put("/api/burgers/:id", async function(req, res) {
     console.log(req.params.id)
     try {
