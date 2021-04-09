@@ -1,57 +1,62 @@
-#Project Name -  Eatta Burger App 
+# Eatta Burger
       
 
 ## Description
-    Application which shows a list of burgers, you can add burgers to the list and then devour them to add them to the devoured list. Uses express handlebars and MySQL"
+   Application which shows a list of burgers, you can add burgers to the list and then devour them to add them to the devoured list. Uses express handlebars and MySQL" 
 
 ## Table of Content
    
-*[Installation](#installation)
+* [Installation](#installation)
      
-*[Usage](#usage)
+* [Usage](#usage)
+
+* [Future Direction](#Future-Direction)
+
+* [Live Screenshots](#Live-Screenshots)
+
+* [Contributions](#Contributions)
        
-*[Credits](#credits)
+* [Credits](#credits)
     
-*[License](#license)
+* [License](#license)
      
   
 
     
   
 ## Installation
-    Run an npm init - install packages - express, express handlebars and mysql
+1.  For local deployment - install node, run code "npm i" then "npm start" 
+2.  Alternate Method - Click on this [Deployed Link](https://serene-forest-69610.herokuapp.com/)
   
 ## Usage
-    Type in field and click add burger to add burger to the list - click devour to devour burger
+    This application takes in users input; creating a burger by inoutting a name (be creative). The user can choose to add as many burgers as they please. The user can click the devour button next to the burger and it will be "devoured".  
 
-![Live Eatta Burger application with header text "Eatta Burger App" and an image of a burger. The field to add a burger, and the lists of burgers below](public\assets\img\Capture.PNG)
+    The data being inputted by the user is stored in a MySQL database, API calls are made to pull that information and display them.  
+
+## Future Direction
+* CSS reworks for page.
+* Allowing user to clear lists and view older burgers.
+* Allowing user to list specific ingredients for burgers (might use a relational database structure).
+
+### Live Screenshots
+
+![Live Eatta Burger application](public/assets/img/Capture.PNG)
+
+
+### Contributions 
+
+    This application has an MIT license and is completely open to open source contribution! Feel free to fork and enhance the functionality and add features if you would like! 
+
+### Changelog
+    Version: 1.0: First Release 
+    
 ## Credits
-    undefined
+    N/A
     
 ## License
      MIT
-     
-Copyright (c) [2021] [Kenneth Joe-Ezigbo]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
       
     
 ## Questions
-* Github : [ezkenneth](github.com/ezkenneth)
+* Github : [Ezkenneth](github.com/Ezkenneth)
 * E-mail : Reach me at - kennethjoeezigbo@gmail.com
